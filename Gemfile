@@ -35,23 +35,28 @@ gem "thruster", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 gem "rack-cors"
 
-# GraphQL API (Enterprise Pattern)
+# GraphQL API (from your enterprise stack)
 gem "graphql"
 gem "graphiql-rails", group: :development
-gem "graphql-batch"  # Query optimization
 
-# Authentication & Authorization (Enterprise)
+# Authentication & Authorization 
 gem "bcrypt", "~> 3.1.7"
 gem "jwt"
 
-# Monitoring & Observability (Enterprise Stack)
+# Monitoring & Observability (from your stack)
 gem "sentry-ruby"
 gem "sentry-rails"
 
-# For basic web views (Bootstrap for now, Next.js will replace)
-gem "bootstrap", "~> 5.3"
-gem "sassc-rails"
+# Frontend Pipeline (Enterprise Stack - Yarn + Modern JS)
+gem "jsbundling-rails"  # Modern JS bundling with Yarn
+gem "cssbundling-rails"  # Modern CSS bundling  
+gem "stimulus-rails"     # Stimulus JS framework
+gem "turbo-rails"       # Turbo for SPA-like experience
 gem "image_processing", "~> 1.2"
+
+# Development Tools (from your enterprise stack)
+gem "annotate", group: :development  # Documentation
+gem "foreman", group: :development   # Process management
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
