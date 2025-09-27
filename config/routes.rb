@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "test/example"
+  get "home/index"
   post "/graphql", to: "graphql#execute"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -8,6 +10,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # Home page
+  root "home#index"
 
   # GraphiQL IDE, only in development
   if Rails.env.development?
