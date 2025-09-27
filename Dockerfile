@@ -2,8 +2,8 @@
 # check=error=true
 
 # This Dockerfile is designed for production, not development. Use with Kamal or build'n'run by hand:
-# docker build -t dev_hub_monolith .
-# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name dev_hub_monolith dev_hub_monolith
+# docker build -t carrie_rails_workspace .
+# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name carrie_rails_workspace carrie_rails_workspace
 
 # For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
 
