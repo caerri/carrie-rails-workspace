@@ -18,14 +18,13 @@ module Types
       ids.map { |id| context.schema.object_from_id(id, context) }
     end
 
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
-
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    # finding github user data using graphQL
+    field :github_user, String, null: true do
+      argument :username, String, required: true
+      description "Fetch GitHub repo data by username"
     end
+
+    def github_user(username:)
+      require 'net/http'
   end
 end
