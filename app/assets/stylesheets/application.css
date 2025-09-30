@@ -1,0 +1,4 @@
+/* Default Rails application.css manifest for Importmap/Propshaft */
+/* Add all your CSS imports here */
+
+@import "homepage.css";

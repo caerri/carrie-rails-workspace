@@ -1,3 +1,6 @@
+gem 'sassc-rails'
+# Use Bootstrap via Ruby gem for Sprockets
+gem 'bootstrap', '~> 5.3'
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -37,7 +40,6 @@ gem "rack-cors"
 
 # GraphQL API (from your enterprise stack)
 gem "graphql"
-gem "graphiql-rails", group: :development
 
 # Authentication & Authorization 
 gem "bcrypt", "~> 3.1.7"
@@ -47,9 +49,7 @@ gem "jwt"
 gem "sentry-ruby"
 gem "sentry-rails"
 
-# Frontend Pipeline (Enterprise Stack - Yarn + Modern JS)
-gem "jsbundling-rails"  # Modern JS bundling with Yarn
-gem "cssbundling-rails"  # Modern CSS bundling  
+ # ...existing code...
 gem "stimulus-rails"     # Stimulus JS framework
 gem "turbo-rails"       # Turbo for SPA-like experience
 gem "image_processing", "~> 1.2"
@@ -63,6 +63,9 @@ gem 'dotenv-rails'
 
 # GraphiQL
 gem 'graphiql-rails', group: :development
+
+gem 'sprockets-rails'
+gem 'sassc'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
